@@ -1,0 +1,23 @@
+.main {
+	height: 40rem;
+	background-color: red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+
+	.mainCard {
+		background-color: blue;
+		height: 30rem;
+		padding: 2rem;
+		transform: scale(1.2);
+		z-index: 3;
+	}
+
+	.secondCard {
+		background-color: purple;
+		height: 30rem;
+		padding: 2rem;
+		filter: blur(1px);
+	}
+}
