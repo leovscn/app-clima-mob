@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Header.module.scss';
 import { MapPin, MagnifyingGlass } from '@phosphor-icons/react';
 
@@ -11,7 +10,7 @@ export const Header = () => {
 				</div>
 				<div className={styles.iconDiv}>
 					<MapPin size={32} color="#fafafa" weight="bold" />
-					<span className={styles.cityName}>Gravataí</span>
+					<span className={styles.cityName}>{}</span>
 				</div>
 				<div className={styles.inputDiv}>
 					<MagnifyingGlass size={32} color="#fafafa" weight="bold" />

@@ -59,18 +59,19 @@ export interface IChildren {
 }
 
 interface IWeatherContext {
-    getWeather: (city: string) => Promise<void>;
-    status: Current | undefined;
+    getWeather: (lat: number, lon: number) => Promise<void>;
+    status?: IAPIResponse;
 }
 
 export const WeatherContext = createContext({} as IWeatherContext);
 
 export const WeatherProvider = ({ children }: IChildren) => {
-    const [status, setStatus] = useState<Current>();
-    const getWeather = async (city: string) => {
+    const [status, setStatus] = useState<IAPIResponse>();
+    const getWeather = async (lat: number, lon: number) => {
         try {
+            console.log(lat, lon)
             const response = await fetch(
-                `https://api.weatherapi.com/v1/current.json?key=665e6f7fce9e4a129a9172450230504&q=${city}&aqi=no`
+                `https://api.weatherapi.com/v1/current.json?key=665e6f7fce9e4a129a9172450230504&q=${lat},${lon}&aqi=no`,
             );
 
             if (response.ok) {
