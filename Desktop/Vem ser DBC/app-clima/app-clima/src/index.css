@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Maven Pro", sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(65, 10, 154);
+  background: linear-gradient(
+    180deg,
+    rgba(65, 10, 154, 1) 0%,
+    rgba(74, 23, 154, 1) 100%
+  );
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  color: #fafafa;
+  font-size: 1.6rem;
+}
